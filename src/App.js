@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Table from "./component/Table";
+
+const dataSet = [
+  { name: "Shreeshail", age: 26 },
+  { name: "Sachin", age: 20 },
+  { name: "akash", age: 22 },
+  { name: "barath", age: 30 },
+  { name: "kiran", age: 22 },
+];
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Table rows={dataSet} columns={["Name", "Age"]} />
     </div>
   );
 }
